@@ -43,6 +43,9 @@ def wheel(pos):
 
 def flicker(idx, rgbVal):
     neopixels[idx] = rgbVal
+    if idx > 2 and idx < NUMPIXELS -2:
+        neopixels[idx -2] = rgbVal
+        neopixels[idx -1] = rgbVal
     time.sleep(0.0125)
     neopixels[idx] = (0, 0, 0)
 
@@ -85,23 +88,24 @@ while True:
     if touch.value:
         neopixels.brightness = 1
         neopixels.fill((0, 0, 0))
-        if COLOR == 1:
-            flicker(random.randint(0, (3-1)),(255, 255, 255))
-        elif COLOR == 2:
-            flicker(random.randint(0, (3-1)),(255, 0, 0))
+        flicker(random.randint(0, (NUMPIXELS-1)),(255, 255, 255))
         colorChange = 1;
       # print("D3 touched!")
     else:
         if colorChange:
-            print("Changing color!")
+            # print("Changing color!")
             if COLOR == 1:
                 COLOR = 2
-                print("color change to 2")
-                print(COLOR)
+                # print("color change to 2")
+                # print(COLOR)
             elif COLOR == 2:
                 COLOR = 1
-                print("color change to 1")
+            else:
+                COLOR = 1
+                # print("color change to 1")
             colorChange = 0
+            if random.randint(0, 10) == 5:
+                COLOR = 3
 
         aPixel = neopixels[0]
         rCur = aPixel[0]
@@ -116,8 +120,8 @@ while True:
             redPulse()
         elif COLOR == 2:
             whitePulse()
-        # redPulse()
-        # rainbowPulse(i)
+        elif COLOR == 3:
+            rainbowPulse(i)
 
     i = (i+30) % 256  # run from 0 to 255
     neopixels.brightness = .1
