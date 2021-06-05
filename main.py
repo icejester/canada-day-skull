@@ -7,6 +7,7 @@ from analogio import *
 from board import *
 import time
 import neopixel
+import random
 
 # Capacitive touch on D3
 touch = TouchIn(D1)
@@ -38,19 +39,32 @@ def wheel(pos):
         pos -= 170
         return (0, int(pos*3), int(255 - pos*3))
 
+def flicker(idx, rgbVal):
+    neopixels[idx] = rgbVal
+    time.sleep(0.0125)
+    neopixels[idx] = (0, 0, 0)
+
 ######################### MAIN LOOP ##############################
 
 i = 0;
 while True:
 
-  # also make the neopixels swirl around
-  for p in range(NUMPIXELS):
-      idx = int ((p * 256 / NUMPIXELS) + i)
-      neopixels[p] = wheel(idx & 255)
-  neopixels.show()
+    if touch.value:
+        neopixels.brightness = 1
+        neopixels.fill((0, 0, 0))
+        flicker(random.randint(0, (3-1)),(255, 255, 255))
+      # print("D3 touched!")
+    else:
+        # also make the neopixels swirl around
+        for p in range(NUMPIXELS):
+            idx = int ((p * 256 / NUMPIXELS) + i)
+            neopixels[p] = wheel(idx & 255)
+        neopixels.show()
 
-  if touch.value:
-      print("D3 touched!")
+    i = (i+30) % 256  # run from 0 to 255
+    neopixels.brightness = .1
+    # time.sleep(1.1) # make bigger to slow down
 
-  i = (i+20) % 256  # run from 0 to 255
-  #time.sleep(0.01) # make bigger to slow down
+    # neopixels[0] = (255,255, 255)
+    # neopixels[0] = (0, 0, 0)
+    # time.sleep(0.1)
