@@ -29,4 +29,10 @@ I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopi
 
 <img src="images/schematic.jpg" width="200"/>
 
-### The scaffolding / resin
+### The scaffolding
+I created a wire "spiral" to put into the bottle out of 12GA shielded copper wire. It was on that that I took the LED strip and wond it around the spiral. I Did "both sides" and used double sided tape to make sure the LED strip stayed on the scaffolding.
+
+<img src="images/scaffolding.jpg" width="200"/>
+
+After that, the next problem to solve was getting power to the board / lights
+<img src="images/drill.jpg" width="200"/> <img src="images/hole.jpg" width="200"/>
