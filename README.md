@@ -9,3 +9,18 @@ So my buddy has a "Canada Day" party every year. Everything at the party is some
 Over the years we've collectively emptied several of these bottles, and the host of the party decided to use them as trophies / decorations. One year, they added some stranded LED lights and the skulls appeared to glow. Cool table decorations (as the party usually rages on into the evening), but as I held one... I thought, "I can do this better I think."
 
 <img src="images/skull-pondering.jpg" width="200"/>
+
+# Construction
+I knew it was going to be a daunting task. I have ony a few requirements, but they were important to me. 
+
+* Use "smart" LEDs that could be animated
+* Use the colors of the Canadian flag (red and white)
+* Do some sort of LED "animation"
+* protect the circuit from the normal "bumps and brusies" that happen when people start drinking
+
+Armed with some small electronics from [adafruit](https://www.adafruit.com/) and some resin from [Resin Obsession](https://shop.resinobsession.com/) I set out to light the skull...
+
+## The circuit
+I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shilded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
+
+<img src="images/schematic.jpg" width="200"/>
