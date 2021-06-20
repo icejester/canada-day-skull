@@ -24,9 +24,9 @@ I knew it was going to be a daunting task. I have ony a few requirements, but th
 
 Armed with some small electronics from [adafruit](https://www.adafruit.com/) and some resin from [Resin Obsession](https://shop.resinobsession.com/) I set out to light the skull...
 
-#### The circuit
+### The circuit
 I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shilded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
 
 <img src="images/schematic.jpg" width="200"/>
 
-#### The scaffolding / resin
+### The scaffolding / resin
