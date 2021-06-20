@@ -60,3 +60,6 @@ def redPulse():
     if DIRECTION == 2:
         neopixels.fill((rCur - 10, gCur, bCur))
 ```
+
+# The results
+So github / markdown doesn't really do video embedding, so I made a quick video and pushed it up to youtube. You can view it [here.](https://youtu.be/npWIqatQBV4)
