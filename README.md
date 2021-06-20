@@ -35,4 +35,5 @@ I created a wire "spiral" to put into the bottle out of 12GA shielded copper wir
 <img src="images/scaffolding.jpg" width="200"/>
 
 After that, the next problem to solve was getting power to the board / lights
+
 <img src="images/drill.jpg" width="200"/> <img src="images/hole.jpg" width="200"/>
