@@ -19,8 +19,7 @@ I knew it was going to be a daunting task. I have ony a few requirements, but th
 
 * Use "smart" LEDs that could be animated
 * Use the colors of the Canadian flag (red and white)
-* Do some sort of LED "animation"
-* protect the circuit from the normal "bumps and brusies" that happen when people start drinking
+* Protect the circuit from the normal "bumps and brusies" that happen when people start drinking
 
 Armed with some small electronics from [adafruit](https://www.adafruit.com/) and some resin from [Resin Obsession](https://shop.resinobsession.com/) I set out to light the skull...
 
@@ -42,3 +41,10 @@ After that, the next problem to solve was getting power to the board / lights
 Finally, I wanted to protect everything from rattling around in the skull and decided that "resin" would be a good fit for that purpose. I settled on [Resin Obsession deep pour resin](https://shop.resinobsession.com/collections/resin/resin-obsession-deep-pour-resin) because my total volume was 750ml and 6" deep. This was my first experience with resin (although I had been interested in it for a while) and I found this particular product very easy to work with. It was a simple 2:1 mixture and then pour. 
 
 <img src="images/pour-1.2.jpg" width="400"/> <img src="images/pour-1.1.jpg" width="400"/>
+
+A bit of a warning... I did NOT do a great job of sealing the hole at the bottom of the skull, so there was a little bit of seepage. The "good news" is that once the resin cured half way (36 hours or so), the hole was plugged, and I was able to clean up the spill with acetone. 
+
+# The software
+I settled on [circuit python](https://circuitpython.org/) for the software. It's easy to write, test, and deploy. Everything boils down to a main loop that executes ~6 times per second. This is important to note because you want to write your functions in a way that works with the timing. For example, your function should only "move" the lights one step every time the loop executes. If you have your function do more than one step at a time, you will never be able to interrupt the animation until it finishes:
+
+https://github.com/icejester/canada-day-skull/blob/01ebac9dee7cac085a8d80cc7395db142458742b/main.py#L57-67
