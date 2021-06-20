@@ -41,4 +41,4 @@ After that, the next problem to solve was getting power to the board / lights
 ### The Resin
 Finally, I wanted to protect everything from rattling around in the skull and decided that "resin" would be a good fit for that purpose. I settled on [Resin Obsession deep pour resin](https://shop.resinobsession.com/collections/resin/resin-obsession-deep-pour-resin) because my total volume was 750ml and 6" deep. This was my first experience with resin (although I had been interested in it for a while) and I found this particular product very easy to work with. It was a simple 2:1 mixture and then pour. 
 
-<img src="images/pour-1.1.jpg" width="400"/> <img src="images/pour-1.2.jpg" width="400"/>
+<img src="images/pour-1.2.jpg" width="400"/> <img src="images/pour-1.1.jpg" width="400"/>
