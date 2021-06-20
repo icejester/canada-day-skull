@@ -15,7 +15,7 @@ It was about a year an a half ago when I was in a bar and asked for Crystal Head
 <img src="images/skull-toad.jpg" width="200"/>
 
 # Construction
-I knew it was going to be a daunting task. I have ony a few requirements, but they were important to me. 
+I knew it was going to be a daunting task. I had only a few requirements, but they were important to me. 
 
 * Use "smart" LEDs that could be animated
 * Use the colors of the Canadian flag (red and white)
@@ -24,9 +24,9 @@ I knew it was going to be a daunting task. I have ony a few requirements, but th
 Armed with some small electronics from [adafruit](https://www.adafruit.com/) and some resin from [Resin Obsession](https://shop.resinobsession.com/) I set out to light the skull...
 
 ### The circuit
-I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shilded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
+I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shielded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
 
-<img src="images/schematic.jpg" width="200"/>
+<img src="images/schematic.jpg" width="400"/>
 
 ### The scaffolding
 I created a wire "spiral" to put into the bottle out of 12GA shielded copper wire. It was on that that I took the LED strip and wond it around the spiral. I Did "both sides" and used double sided tape to make sure the LED strip stayed on the scaffolding.
