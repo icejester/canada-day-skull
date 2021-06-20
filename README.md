@@ -47,4 +47,4 @@ A bit of a warning... I did NOT do a great job of sealing the hole at the bottom
 # The software
 I settled on [circuit python](https://circuitpython.org/) for the software. It's easy to write, test, and deploy. Everything boils down to a main loop that executes ~6 times per second. This is important to note because you want to write your functions in a way that works with the timing. For example, your function should only "move" the lights one step every time the loop executes. If you have your function do more than one step at a time, you will never be able to interrupt the animation until it finishes:
 
-https://github.com/icejester/canada-day-skull/blob/01ebac9dee7cac085a8d80cc7395db142458742b/main.py#L57-67
+```https://github.com/icejester/canada-day-skull/blob/01ebac9dee7cac085a8d80cc7395db142458742b/main.py#L57-67```
