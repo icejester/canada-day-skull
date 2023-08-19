@@ -8,14 +8,15 @@ So if you've gotten around to this release, you likely know that this project wa
 I've made a few of these skulls since the first one. I wanted one of my own so on Canada Day 2022, I walked out of the Canada Day party with a skull of my very own. As fate would have it, it was one of [the "Made With Pride"](https://www.crystalheadvodka.com/news/made-with-pride) bottles. Cool... More color, better.  
 
 # Construction
-I wanted to focus more on documenting the construction process this time around. One of the things I missed the first time was showing the "scaffolding" for the LED strips: 
+### I wanted to focus more on documenting the construction process this time around. One of the things I missed the first time was showing the "scaffolding" for the LED strips: 
 
 
-<img src="images/scaffold-1.jpg" width="400"/>
-<img src="images/scaffold-2.jpg" width="400"/>
-<img src="images/scaffold-3.jpg" width="400"/>
+<img src="images/scaffold-1.jpg" width="250"/>
+<img src="images/scaffold-2.jpg" width="250"/>
+<img src="images/scaffold-3.jpg" width="250"/>
 
-As well as some of the soldering:
+### As well as some of the soldering:
+
 <img src="images/solder-1.jpg" width="400"/>
 <img src="images/solder-2.jpg" width="400"/>
 <img src="images/solder-3.jpg" width="400"/>
