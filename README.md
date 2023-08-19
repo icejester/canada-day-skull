@@ -4,32 +4,24 @@
 # Origin story
 So if you've gotten around to this release, you likely know that this project was started because of my buddy and his Canada Day party. If you're not familliar with the origin story, I highly suggest checking out [the original.](https://github.com/icejester/canada-day-skull/tree/cds-v1.0.0)
 
-Over the years we've collectively emptied several of these bottles, and the host of the party decided to use them as trophies / decorations. One year, they added some stranded LED lights and the skulls appeared to glow. Cool table decorations (as the party usually rages on into the evening), but as I held one... I thought, "I can do this better I think."
-
-<img src="images/skull-pondering.jpg" width="200"/>
-
-It was about a year an a half ago when I was in a bar and asked for Crystal Head vodka and I proceeded to drink the last the bar had. They gave me the skull as a "thank you," and that's when I decided that fate had given me a kick in the pants to execute on the project...
-
-<img src="images/skull-toad.jpg" width="200"/>
+# Time marches on
+I've made a few of these skulls since the first one. I wanted one of my own so on Canada Day 2022, I walked out of the Canada Day party with a skull of my very own. As fate would have it, it was one of [the "Made With Pride"](https://www.crystalheadvodka.com/news/made-with-pride) bottles. Cool... More color, better.  
 
 # Construction
-I knew it was going to be a daunting task. I had only a few requirements, but they were important to me. 
+I wanted to focus more on documenting the construction process this time around. One of the things I missed the first time was showing the "scaffolding" for the LED strips: 
 
-* Use "smart" LEDs that could be animated
-* Use the colors of the Canadian flag (red and white)
-* Protect the circuit from the normal "bumps and brusies" that happen when people start drinking
 
-Armed with some small electronics from [adafruit](https://www.adafruit.com/) and some resin from [Resin Obsession](https://shop.resinobsession.com/) I set out to light the skull...
+<img src="images/scaffold-1.jpg" width="400"/>
+<img src="images/scaffold-2.jpg" width="400"/>
+<img src="images/scaffold-3.jpg" width="400"/>
+
+As well as some of the soldering:
+<img src="images/solder-1.jpg" width="400"/>
+<img src="images/solder-2.jpg" width="400"/>
+<img src="images/solder-3.jpg" width="400"/>
 
 ### The circuit
 I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shielded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
-
-<img src="images/schematic.jpg" width="400"/>
-
-### The scaffolding
-I created a wire "spiral" to put into the bottle out of 12GA shielded copper wire. It was on that that I took the LED strip and wond it around the spiral. I did "both sides" and used double sided tape to make sure the LED strip stayed on the scaffolding.
-
-<img src="images/scaffolding.jpg" width="400"/>
 
 After that, the next problem to solve was getting power to the board / lights
 
