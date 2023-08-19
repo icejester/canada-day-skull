@@ -89,8 +89,8 @@ while True:
         neopixels.brightness = 1
         neopixels.fill((0, 0, 0))
         flicker(random.randint(0, (NUMPIXELS-1)),(255, 255, 255))
-        colorChange = 1;
-        print("D3 touched!")
+        # colorChange = 1;
+        # print("D3 touched!")
     else:
         if colorChange:
             # print("Changing color!")
@@ -117,7 +117,7 @@ while True:
             DIRECTION = 1
 
         if COLOR == 1:
-            redPulse()
+            whitePulse()
         elif COLOR == 2:
             whitePulse()
         elif COLOR == 3:
