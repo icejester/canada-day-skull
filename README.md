@@ -15,8 +15,7 @@ I've made a few of these skulls since the first one. I wanted one of my own so o
 
 ### As well as some of the soldering:
 
-<img src="images/solder-1.jpg" width="600"/>
-<img src="images/solder-2.jpg" width="250"/> <img src="images/solder-3.jpg" width="250"/>
+<img src="images/solder-1.jpg" width="600"/> <img src="images/solder-2.jpg" width="250"/> <img src="images/solder-3.jpg" width="250"/>
 
 ### The circuit
 I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shielded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
