@@ -11,9 +11,7 @@ I've made a few of these skulls since the first one. I wanted one of my own so o
 ### I wanted to focus more on documenting the construction process this time around. One of the things I missed the first time was showing the "scaffolding" for the LED strips: 
 
 
-<img src="images/scaffold-1.jpg" width="250"/>
-<img src="images/scaffold-2.jpg" width="250"/>
-<img src="images/scaffold-3.jpg" width="250"/>
+<img src="images/scaffold-1.jpg" width="250"/> <img src="images/scaffold-2.jpg" width="250"/> <img src="images/scaffold-3.jpg" width="250"/>
 
 ### As well as some of the soldering:
 
