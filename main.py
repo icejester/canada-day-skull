@@ -13,7 +13,7 @@ import random
 touch = TouchIn(D1)
 
 # NeoPixel strip (of 16 LEDs) connected on D4
-NUMPIXELS = 18
+NUMPIXELS = 30
 neopixels = neopixel.NeoPixel(D3, NUMPIXELS, brightness=.1, auto_write=True)
 DIRECTION = 1 # 1 == "up"
 COLOR = 1 # 1 == "red"
@@ -90,7 +90,7 @@ while True:
         neopixels.fill((0, 0, 0))
         flicker(random.randint(0, (NUMPIXELS-1)),(255, 255, 255))
         colorChange = 1;
-      # print("D3 touched!")
+        print("D3 touched!")
     else:
         if colorChange:
             # print("Changing color!")
