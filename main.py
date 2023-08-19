@@ -132,13 +132,11 @@ while True:
                 # print("color change to 2")
                 # print(COLOR)
             elif COLOR == 2:
-                COLOR = 1
-            else:
-                COLOR = 1
-                # print("color change to 1")
-            colorChange = 0
-            if random.randint(0, 10) == 5:
                 COLOR = 3
+            elif COLOR == 3:
+                COLOR = 1
+
+            colorChange = 0
 
         aPixel = neopixels[0]
         rCur = aPixel[0]
