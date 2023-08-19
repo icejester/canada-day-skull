@@ -22,7 +22,7 @@ I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopi
 
 After that, the next problem to solve was getting power to the board / lights
 
-<img src="images/drill.jpg" width="400"/> <img src="images/hole.jpg" width="400"/>
+<img src="images/pdrill-hol3.jpg" width="600"/>
 
 ### The Resin
 Finally, I wanted to protect everything from rattling around in the skull and decided that "resin" would be a good fit for that purpose. I settled on [Resin Obsession deep pour resin](https://shop.resinobsession.com/collections/resin/resin-obsession-deep-pour-resin) because my total volume was 750ml and 6" deep. This was my first experience with resin (although I had been interested in it for a while) and I found this particular product very easy to work with. It was a simple 2:1 mixture and then pour. 
