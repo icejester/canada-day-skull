@@ -15,7 +15,7 @@ I've made a few of these skulls since the first one. I wanted one of my own so o
 
 ### As well as some of the soldering:
 
-<img src="images/solder-1.jpg" width="500"/>
+<img src="images/solder-1.jpg" width="600"/>
 <img src="images/solder-2.jpg" width="250"/> <img src="images/solder-3.jpg" width="250"/>
 
 ### The circuit
