@@ -86,7 +86,7 @@ def blinkFade():
     # count total lit pixels
     for p in range(NUMPIXELS):
         aPixel = neopixels[p]
-        if aPixel[0] > 0:
+        if aPixel[0] > 10:
             rCur = aPixel[0]
             gCur = aPixel[1]
             bCur = aPixel[2]
@@ -104,6 +104,9 @@ def blinkFade():
                     print("added a pixel there are ")
                     print(currentLitPixels)
                     print( "lit pixels")
+    
+    if currentLitPixels < 2:
+        neopixels[random.randint(0,29)] = (250, 250, 250)
 
 ######################### MAIN LOOP ##############################
 
