@@ -96,17 +96,20 @@ def blinkFade():
     
     # if the number of lit pixels is less than max lit pixels
     if currentLitPixels < 15:
-        for p in range(NUMPIXELS):
-            if neopixels[p][0] == 0:
-                # there is a 1:15 chance that the pixel will get lit
-                if random.randint(0, 15) == 7:
-                    neopixels[p] = (250, 250, 250)
-                    print("added a pixel there are ")
-                    print(currentLitPixels)
-                    print( "lit pixels")
-    
-    if currentLitPixels < 2:
         neopixels[random.randint(0,29)] = (250, 250, 250)
+
+    # if currentLitPixels < 15:
+    #     for p in range(NUMPIXELS):
+    #         if neopixels[p][0] == 0:
+                # there is a 1:10 chance that the pixel will get lit
+    #             if random.randint(0, 10) == 7:
+    #                 neopixels[p] = (250, 250, 250)
+    #                 print("added a pixel there are ")
+    #                 print(currentLitPixels)
+    #                 print( "lit pixels")
+    
+    # if currentLitPixels < 2:
+    #     neopixels[random.randint(0,29)] = (250, 250, 250)
 
 ######################### MAIN LOOP ##############################
 
