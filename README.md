@@ -1,6 +1,7 @@
 # canada-day-skull
 Overview and python code for my "Canada Day" skull party light / drinking game
 
+# PRIDE SKULL UPDATE!
 <img src="images/skull-final.jpg" width="600"/>
 
 # Origin story
