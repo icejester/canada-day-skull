@@ -19,8 +19,8 @@ I've made a few of these skulls since the first one. I wanted one of my own so o
 
 ### Testing how well the pearlizing defracts the lights:
 
-<img src="images/pskul-1.gif" width="600"/>
-<img src="images/pskul-2.gif" width="600"/>
+<img src="images/pskul-1.gif" width="300"/>
+<img src="images/pskul-2.gif" width="300"/>
 
 ### The circuit
 I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shielded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
