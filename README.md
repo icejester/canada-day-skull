@@ -38,7 +38,7 @@ Of all the steps involved in this project, drilling the hole has the most risk a
 ### The Resin 
 In years past I have always done "glass" resin to accent the internals. I even went so far as to do one in multiple pours with differnet colors. This year, my daughter suggested I "pearlize" the resin with mica powder. I took some pictures between pours to capture how well the pearlization disburses the light
 
-<img src="images/pskul-1.gif" width="300"/> <img src="images/rwskull-1.gif" width="300"/> <img src="images/pskul-2.gif" width="300"/> 
+<img src="images/pskul-1.gif" width="250"/> <img src="images/rwskull-1.jpg" width="250"/> <img src="images/pskul-2.gif" width="250"/> 
 
 # The software
 I settled on [circuit python](https://circuitpython.org/) for the software. It's easy to write, test, and deploy. Everything boils down to a main loop that executes ~6 times per second. This is important to note because you want to write your functions in a way that works with the timing. For example, your function should only "move" the lights one step every time the loop executes. If you have your function do more than one step at a time, you will never be able to interrupt the animation until it finishes:
