@@ -36,26 +36,29 @@ Of all the steps involved in this project, drilling the hole has the most risk a
 <img src="images/pdrill-hole.jpg" width="600"/>
 
 ### The Resin 
-In years past I have always done "glass" resin to accent the internals. I even went so far as to do one in multiple pours with differnet colors. This year, my daughter suggested I "pearlize" the resin with mica powder. I took some pictures between pours to capture how well the pearlization disburses the light
+In years past I have always done "glass" resin to accent the internals. I even went so far as to do one in multiple pours with differnet colors. This year, my daughter suggested I "pearlize" the resin with mica powder. I took some pictures between pours to capture how well the pearlization diffuses the light
 
 <img src="images/pskul-1.gif" width="250"/> <img src="images/rwskull-1.jpg" width="250"/> <img src="images/pskul-2.gif" width="250"/> 
 
 # The software
-I settled on [circuit python](https://circuitpython.org/) for the software. It's easy to write, test, and deploy. Everything boils down to a main loop that executes ~6 times per second. This is important to note because you want to write your functions in a way that works with the timing. For example, your function should only "move" the lights one step every time the loop executes. If you have your function do more than one step at a time, you will never be able to interrupt the animation until it finishes:
+I didn't do a whole lot different this time with exception to what I'm calling the blinkFade method. I wanted something that would look like randomly starting lights that faded away over time. I think this was a pretty succinct way to get that done.
 
 ```
-def redPulse():
-    aPixel = neopixels[0]
-    rCur = aPixel[0]
-    gCur = aPixel[1]
-    bCur = aPixel[2]
-
-    if DIRECTION == 1:
-        neopixels.fill((rCur + 10, gCur, bCur))
-
-    if DIRECTION == 2:
-        neopixels.fill((rCur - 10, gCur, bCur))
+def blinkFade():
+    # print("blinking")
+    currentLitPixels = 0
+    # count total lit pixels
+    for p in range(NUMPIXELS):
+        aPixel = neopixels[p]
+        if aPixel[0] > 10:
+            rCur = aPixel[0]
+            gCur = aPixel[1]
+            bCur = aPixel[2]
+            
+            neopixels[p] = ((rCur - 10, gCur - 10, bCur - 10))
+            currentLitPixels += 1
+    
+    # if the number of lit pixels is less than max lit pixels
+    if currentLitPixels < 15:
+        neopixels[random.randint(0,29)] = (250, 250, 250)
 ```
-
-# The results
-So github / markdown doesn't really do video embedding, so I made a quick video and pushed it up to youtube. You can view it [here.](https://youtu.be/npWIqatQBV4)
