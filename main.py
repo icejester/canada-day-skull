@@ -13,7 +13,9 @@ import random
 touch = TouchIn(D1)
 
 # NeoPixel strip (of 16 LEDs) connected on D4
-NUMPIXELS = 18
+NUMPIXELS = 30
+MAXLITBLINKPIXELS = 15
+CURLITBLINKPIXELS = 0
 neopixels = neopixel.NeoPixel(D3, NUMPIXELS, brightness=.1, auto_write=True)
 DIRECTION = 1 # 1 == "up"
 COLOR = 1 # 1 == "red"
@@ -78,6 +80,37 @@ def whitePulse():
     if DIRECTION == 2:
         neopixels.fill((rCur - 10, gCur - 10, bCur - 10))
 
+def blinkFade():
+    # print("blinking")
+    currentLitPixels = 0
+    # count total lit pixels
+    for p in range(NUMPIXELS):
+        aPixel = neopixels[p]
+        if aPixel[0] > 10:
+            rCur = aPixel[0]
+            gCur = aPixel[1]
+            bCur = aPixel[2]
+            
+            neopixels[p] = ((rCur - 10, gCur - 10, bCur - 10))
+            currentLitPixels += 1
+    
+    # if the number of lit pixels is less than max lit pixels
+    if currentLitPixels < 15:
+        neopixels[random.randint(0,29)] = (250, 250, 250)
+
+    # if currentLitPixels < 15:
+    #     for p in range(NUMPIXELS):
+    #         if neopixels[p][0] == 0:
+                # there is a 1:10 chance that the pixel will get lit
+    #             if random.randint(0, 10) == 7:
+    #                 neopixels[p] = (250, 250, 250)
+    #                 print("added a pixel there are ")
+    #                 print(currentLitPixels)
+    #                 print( "lit pixels")
+    
+    # if currentLitPixels < 2:
+    #     neopixels[random.randint(0,29)] = (250, 250, 250)
+
 ######################### MAIN LOOP ##############################
 
 i = 0;
@@ -90,7 +123,7 @@ while True:
         neopixels.fill((0, 0, 0))
         flicker(random.randint(0, (NUMPIXELS-1)),(255, 255, 255))
         colorChange = 1;
-      # print("D3 touched!")
+        # print("D3 touched!")
     else:
         if colorChange:
             # print("Changing color!")
@@ -99,13 +132,11 @@ while True:
                 # print("color change to 2")
                 # print(COLOR)
             elif COLOR == 2:
-                COLOR = 1
-            else:
-                COLOR = 1
-                # print("color change to 1")
-            colorChange = 0
-            if random.randint(0, 10) == 5:
                 COLOR = 3
+            elif COLOR == 3:
+                COLOR = 1
+
+            colorChange = 0
 
         aPixel = neopixels[0]
         rCur = aPixel[0]
@@ -117,7 +148,7 @@ while True:
             DIRECTION = 1
 
         if COLOR == 1:
-            redPulse()
+            blinkFade()
         elif COLOR == 2:
             whitePulse()
         elif COLOR == 3:

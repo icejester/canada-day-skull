@@ -1,65 +1,64 @@
-# canada-day-skull
-Overview and python code for my "Canada Day" skull party light / drinking game
-
-<img src="images/skull-final.jpg" width="600"/>
+# CANADA DAY SKULL - MADE WITH PRIDE!
+<img src="images/pskul-fin-resin.gif" width="600"/>
 
 # Origin story
-So my buddy has a "Canada Day" party every year. Everything at the party is somehow tied to Canada. It's a fun time, kind of an exercise in absurdity, and something I look forward to every year. As "everything has to be Canadian," and I'm a vodka drinker, my friend went through the time, effort and energy of finding a Canadian vodka. Turns out that ["Crystal Head" vodka](https://www.crystalheadvodka.com/ourstory) is exported by Canada, and further... fronted by famous Canadian Comedian Dan Aykroyd. As an extra bonus, it comes in a cool looking skull-shaped bottle.
+So if you've gotten around to this release, you likely know that this project was started because of my buddy and his Canada Day party. If you're not familliar with the origin story, I highly suggest checking out [the original.](https://github.com/icejester/canada-day-skull/tree/cds-v1.0.0)
 
-Over the years we've collectively emptied several of these bottles, and the host of the party decided to use them as trophies / decorations. One year, they added some stranded LED lights and the skulls appeared to glow. Cool table decorations (as the party usually rages on into the evening), but as I held one... I thought, "I can do this better I think."
-
-<img src="images/skull-pondering.jpg" width="200"/>
-
-It was about a year an a half ago when I was in a bar and asked for Crystal Head vodka and I proceeded to drink the last the bar had. They gave me the skull as a "thank you," and that's when I decided that fate had given me a kick in the pants to execute on the project...
-
-<img src="images/skull-toad.jpg" width="200"/>
+# Time marches on
+I've made a few of these skulls since the first one. I wanted one of my own so on Canada Day 2022, I walked out of the Canada Day party with a skull of my very own. As fate would have it, it was one of the ["Made With Pride"](https://www.crystalheadvodka.com/news/made-with-pride) skull bottles, which I thought was pretty cool.   
 
 # Construction
-I knew it was going to be a daunting task. I had only a few requirements, but they were important to me. 
 
-* Use "smart" LEDs that could be animated
-* Use the colors of the Canadian flag (red and white)
-* Protect the circuit from the normal "bumps and brusies" that happen when people start drinking
+I wanted to focus more on documenting the construction process this time around. I missed several aspects the first time, so I'd like to focus on them here.
 
-Armed with some small electronics from [adafruit](https://www.adafruit.com/) and some resin from [Resin Obsession](https://shop.resinobsession.com/) I set out to light the skull...
+### Scaffolding 
+
+<img src="images/scaffold-1.jpg" width="250"/> <img src="images/scaffold-2.jpg" width="250"/> <img src="images/scaffold-3.jpg" width="250"/>
+
+One of the things I wanted to improve on with the first iteration was how the loose LEDs in the jar would "clump up" and the skull would have light and dark spots. I wanted the lights to be spread out over the entire volume. I settled on a piece of ridgid copper shielded wire (12 GA) formed into a spiral. The first iteration I used double sided tape to secure the LEDs to the scaffolding. I've used several variations of electrical tape and even hockey tape.
+
+### Soldering:
+
+I really enjoy soldering and as such, bought myself a nice work station with a lighted magnifier. I can not tell you how much "proper tooling" has improved my soldering ability. If you love these kind of hibbies, spend the money. It'll be worth it. Yes there's a ton of unrelated crap on my bench. No I didn't put it there to make me look handy. Yes, I'm just that disorganized.
+
+<img src="images/solder-1.jpg" width="600"/> <img src="images/solder-2.jpg" width="300"/> <img src="images/solder-3.jpg" width="300"/>
 
 ### The circuit
+
 I used an [adafruit trinket](https://www.adafruit.com/product/3500), some [neopixels](https://www.adafruit.com/product/3851) and silicone shielded wire. The schematic is pretty simple. The board and the LED strip are powered directly from the battery, A signal wire (blue) from pin 3 to the signal on the LED strip, and a signal wire from the touch capacitive port (1~) on the board:
 
 <img src="images/schematic.jpg" width="400"/>
 
-### The scaffolding
-I created a wire "spiral" to put into the bottle out of 12GA shielded copper wire. It was on that that I took the LED strip and wond it around the spiral. I did "both sides" and used double sided tape to make sure the LED strip stayed on the scaffolding.
+### The hole... no, really
 
-<img src="images/scaffolding.jpg" width="400"/>
+Of all the steps involved in this project, drilling the hole has the most risk and anxiety. I was quite happy with the hole drilling this time as I no longer had my "good vice" so I had to drill the skull "free hand."
 
-After that, the next problem to solve was getting power to the board / lights
+<img src="images/pdrill-hole.jpg" width="600"/>
 
-<img src="images/drill.jpg" width="400"/> <img src="images/hole.jpg" width="400"/>
+### The Resin 
+In years past I have always done "glass" resin to accent the internals. I even went so far as to do one in multiple pours with differnet colors. This year, my daughter suggested I "pearlize" the resin with mica powder. I took some pictures between pours to capture how well the pearlization diffuses the light
 
-### The Resin
-Finally, I wanted to protect everything from rattling around in the skull and decided that "resin" would be a good fit for that purpose. I settled on [Resin Obsession deep pour resin](https://shop.resinobsession.com/collections/resin/resin-obsession-deep-pour-resin) because my total volume was 750ml and 6" deep. This was my first experience with resin (although I had been interested in it for a while) and I found this particular product very easy to work with. It was a simple 2:1 mixture and then pour. 
-
-<img src="images/pour-1.2.jpg" width="400"/> <img src="images/pour-1.1.jpg" width="400"/>
-
-A bit of a warning... I did NOT do a great job of sealing the hole at the bottom of the skull, so there was a little bit of seepage. The "good news" is that once the resin cured half way (36 hours or so), the hole was plugged, and I was able to clean up the spill with acetone. 
+<img src="images/pskul-1.gif" width="250"/> <img src="images/rwskull-1.jpg" width="250"/> <img src="images/pskul-2.gif" width="250"/> 
 
 # The software
-I settled on [circuit python](https://circuitpython.org/) for the software. It's easy to write, test, and deploy. Everything boils down to a main loop that executes ~6 times per second. This is important to note because you want to write your functions in a way that works with the timing. For example, your function should only "move" the lights one step every time the loop executes. If you have your function do more than one step at a time, you will never be able to interrupt the animation until it finishes:
+I didn't do a whole lot different this time with exception to what I'm calling the blinkFade method. I wanted something that would look like randomly starting lights that faded away over time. I think this was a pretty succinct way to get that done.
 
 ```
-def redPulse():
-    aPixel = neopixels[0]
-    rCur = aPixel[0]
-    gCur = aPixel[1]
-    bCur = aPixel[2]
-
-    if DIRECTION == 1:
-        neopixels.fill((rCur + 10, gCur, bCur))
-
-    if DIRECTION == 2:
-        neopixels.fill((rCur - 10, gCur, bCur))
+def blinkFade():
+    # print("blinking")
+    currentLitPixels = 0
+    # count total lit pixels
+    for p in range(NUMPIXELS):
+        aPixel = neopixels[p]
+        if aPixel[0] > 10:
+            rCur = aPixel[0]
+            gCur = aPixel[1]
+            bCur = aPixel[2]
+            
+            neopixels[p] = ((rCur - 10, gCur - 10, bCur - 10))
+            currentLitPixels += 1
+    
+    # if the number of lit pixels is less than max lit pixels
+    if currentLitPixels < 15:
+        neopixels[random.randint(0,29)] = (250, 250, 250)
 ```
-
-# The results
-So github / markdown doesn't really do video embedding, so I made a quick video and pushed it up to youtube. You can view it [here.](https://youtu.be/npWIqatQBV4)
