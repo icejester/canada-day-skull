@@ -155,7 +155,7 @@ while True:
             rainbowPulse(i)
 
     i = (i+30) % 256  # run from 0 to 255
-    neopixels.brightness = .1
+    neopixels.brightness = .5
     time.sleep(.05) # make bigger to slow down
 
     # neopixels[0] = (255,255, 255)
