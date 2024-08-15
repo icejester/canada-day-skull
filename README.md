@@ -1,11 +1,16 @@
-# CANADA DAY SKULL - MADE WITH PRIDE!
+# CANADA DAY SKULL - TERMINATOR EDITION!!
 <img src="images/pskul-fin-resin.gif" width="600"/>
 
 # Origin story
 So if you've gotten around to this release, you likely know that this project was started because of my buddy and his Canada Day party. If you're not familliar with the origin story, I highly suggest checking out [the original.](https://github.com/icejester/canada-day-skull/tree/cds-v1.0.0)
 
-# Time marches on
-I've made a few of these skulls since the first one. I wanted one of my own so on Canada Day 2022, I walked out of the Canada Day party with a skull of my very own. As fate would have it, it was one of the ["Made With Pride"](https://www.crystalheadvodka.com/news/made-with-pride) skull bottles, which I thought was pretty cool.   
+After taking in the origin story, I'd encourage you to check out "V2" which is also known as [the Pride Skull.](https://github.com/icejester/canada-day-skull/tree/cds-v2.0.0)
+
+# Into each life, a little rain must fall
+
+<img src="images/shatteredSkull.jpeg" width="600"/>
+
+Unfortunately... shortly after my own summer party, the Pride Skull mysteriously shattered. There was no rhyme or reason to it. I walked into my office one day, and the front of the skull had popped off and there were several other cracks in the skull bottle, but the resin stayed in tact. All of the electrical components were in tact and functional. This was totally repairable.
 
 # Construction
 
