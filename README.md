@@ -46,7 +46,10 @@ With all that out of the way, I was ready to start the resin...
 
 I used resin from Resin Obsession again and it was super consistent. I added mica powder for extra diffusion. I didn't think to take a picture, but I will say that I am getitng much better at caulking the power wire hole. Not a single drop spilled this year.
 
-
+<img src="/images/silverLit-0.jpeg" width="600"/>
+<img src="/images/silverLit-1.gif" width="400"/> <img src="/images/silverLit-2.gif" width="400"/>
+<img src="/images/silverLit-3.gif" width="400"/> <img src="/images/silverLit-4.gif" width="400"/>
+<img src="/images/silverOff.gif" width="600"/>
 
 # The software
 I didn't do a whole lot different this time with exception to what I'm calling the blinkFade method. I wanted something that would look like randomly starting lights that faded away over time. I think this was a pretty succinct way to get that done.
