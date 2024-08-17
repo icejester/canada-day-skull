@@ -12,6 +12,12 @@ After taking in the origin story, I'd encourage you to check out "V2" which is a
 
 Unfortunately... shortly after my own summer party, the Pride Skull mysteriously shattered. There was no rhyme or reason to it. I walked into my office one day, and the front of the skull had popped off and there were several other cracks in the skull bottle, but the resin stayed in tact. All of the electrical components were in tact and functional. This was totally repairable with a little time, effort, and energy. 
 
+# Repair
+<img src="images/prideBreak-1.jpeg" width="300"/>
+<img src="images/prideBreak-2.jpeg" width="300"/>
+
+I used a dremel to sand down the edges of the broken glass then used E-6000 to glue them back in place. I had originally planned to shave the glass pieces down enough to fill the resulting gaps with tile grout, but I couldn't seem to take enough off the pieces. Without at least 1/6th of an inch, I couldn't use the grout, I was stuck. I got the idea of trying to pour resin into the cracks hoping it would work similar to grout. The resin was WAY too thin immediately after stirring. After the fitst pour, I noticed the resin was just running off the sidesof the skull. I then decided to apply several coats of resin and eventually the cracks filled in.
+
 # Construction
 
 I honestly dragged my feet a bit this year and the fact that I also wanted to repair the pride skull left me little to no time to really do anything new for construction. I set myself to the task of repairing the pride skull. 
