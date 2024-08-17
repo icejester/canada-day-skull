@@ -32,6 +32,16 @@ I didn't put a lot of time, effort or energy into modifying the physical build. 
 
 The second I connected the battery to the lights I knew that the mirrored glass would add a really cool effect. I thought the additional levels of reflection, diffusion, and discoloration would really pay off in the final implementation.
 
+<img src="/images/silverHole-1.jpeg" width="250"/> <img src="/images/silverHole-2.jpeg" width="250"/> <img src="/images/silverHole-3.jpeg" width="250"/>
+
+Every time I talk to people about the skull, I tell them that the hardest thing about the project is drilling the hole in the bottle. I feel like Im getting better at it, but still experimenting with "better." This year I attempted to use a dremel and a sanding / polishing tip to smooth out the hole. It did not, rather the I broke the tip off in the existing hole. I eventually pulled out the tip with a needle nosed pliars. 
+
+<img src="/images/silverPreResin.jpeg" width="600"/>
+
+With all that out of the way, I was ready to start the resin...
+
+# The Resin
+
 # The software
 I didn't do a whole lot different this time with exception to what I'm calling the blinkFade method. I wanted something that would look like randomly starting lights that faded away over time. I think this was a pretty succinct way to get that done.
 
