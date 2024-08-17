@@ -20,6 +20,18 @@ neopixels = neopixel.NeoPixel(D3, NUMPIXELS, brightness=.1, auto_write=True)
 DIRECTION = 1 # 1 == "up"
 COLOR = 1 # 1 == "red"
 
+# COLORS
+RED = (255, 0, 0)
+ORANGE = (255,165,0)
+WHITE = (125, 125, 125)
+BLUE = (0,0,255)
+PURPLE = (180, 0, 255)
+GREEN = (0, 255, 0)
+CYAN = (0, 255, 255)
+PINK = (255, 192, 200)
+
+COLORPALLET = [CYAN, WHITE, BLUE, PURPLE, GREEN, PINK]
+
 ######################### HELPERS ##############################
 
 # Helper to convert analog input to voltage
@@ -80,23 +92,37 @@ def whitePulse():
     if DIRECTION == 2:
         neopixels.fill((rCur - 10, gCur - 10, bCur - 10))
 
-def blinkFade():
+def blinkFade(blinkColor):
     # print("blinking")
     currentLitPixels = 0
     # count total lit pixels
     for p in range(NUMPIXELS):
         aPixel = neopixels[p]
-        if aPixel[0] > 10:
+        if (aPixel[0] > 10 or aPixel[1] > 10 or aPixel[2] > 10):
             rCur = aPixel[0]
             gCur = aPixel[1]
             bCur = aPixel[2]
             
+            if rCur <= 10:
+                rCur = 10
+            if gCur <= 10:
+                gCur = 10
+            if bCur <= 10:
+                bCur = 10
+            
             neopixels[p] = ((rCur - 10, gCur - 10, bCur - 10))
             currentLitPixels += 1
+        
+        if (aPixel[0] < 10 and aPixel[1] < 10 and aPixel[2] < 10):
+            neopixels[p] = ((0,0,0))
+            currentLitPixels -= 1
+
+    
     
     # if the number of lit pixels is less than max lit pixels
-    if currentLitPixels < 15:
-        neopixels[random.randint(0,29)] = (250, 250, 250)
+    if currentLitPixels < 10:
+        neopixels[random.randint(0,29)] = blinkColor
+        # neopixels[random.randint(0,29)] = (250, 250, 250)
 
     # if currentLitPixels < 15:
     #     for p in range(NUMPIXELS):
@@ -134,6 +160,8 @@ while True:
             elif COLOR == 2:
                 COLOR = 3
             elif COLOR == 3:
+                COLOR = 4
+            elif COLOR == 4:
                 COLOR = 1
 
             colorChange = 0
@@ -148,14 +176,16 @@ while True:
             DIRECTION = 1
 
         if COLOR == 1:
-            blinkFade()
+            blinkFade(COLORPALLET[random.randint(0,5)])
         elif COLOR == 2:
             whitePulse()
         elif COLOR == 3:
             rainbowPulse(i)
+        elif COLOR == 4:
+            blinkFade((255, 255, 255))
 
     i = (i+30) % 256  # run from 0 to 255
-    neopixels.brightness = .1
+    neopixels.brightness = .5
     time.sleep(.05) # make bigger to slow down
 
     # neopixels[0] = (255,255, 255)
