@@ -48,11 +48,19 @@ I used resin from Resin Obsession again and it was super consistent. I added mic
 
 <img src="/images/silverLit-0.jpeg" width="600"/>
 
+The quality of light diffusion and reflection was evident from the first pour. 
+
 <img src="/images/silverLit-1.gif" width="300"/> <img src="/images/silverLit-2.gif" width="300"/>
+
+As I added more resin the effect just kept getting better. The skull took on a really spooky glow depending on which light mode you went through. (These pictures all show the new mode for this year: Multi-color blink fade)
 
 <img src="/images/silverLit-3.gif" width="300"/> <img src="/images/silverLit-4.gif" width="300"/>
 
+More deffusion, more awesome...
+
 <img src="/images/silverOff.gif" width="600"/>
+
+When it's off, it's pretty difficult to discern that there are electronics in there.
 
 # The software
 I didn't do a whole lot different this time with exception to what I'm calling the blinkFade method. I wanted something that would look like randomly starting lights that faded away over time. I think this was a pretty succinct way to get that done.
