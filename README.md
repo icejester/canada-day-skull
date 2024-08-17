@@ -65,6 +65,6 @@ When it's off, it's pretty difficult to discern that there are electronics in th
 # The software
 I did want to add something new with this version and software seemed to be the easiest thing to change. 
 
-[Updated the `blinkFade` function](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L95) to require a color rather than forcing 'white' on myself every time. 
-[Added a COLORPALLET](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L33) to allow for a collection of related colors.
-[Hacky garbage](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L179) to pass a random color from a pallet to the function. 
+- [Updated the `blinkFade()` function](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L95) to require a color rather than forcing 'white' on myself every time.
+- [Added a COLORPALLET](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L33) to allow for a collection of related colors.
+- [Hacky garbage](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L179) to pass a random color from a pallet to the function. 
