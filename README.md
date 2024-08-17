@@ -63,24 +63,8 @@ More deffusion, more awesome...
 When it's off, it's pretty difficult to discern that there are electronics in there.
 
 # The software
-I didn't do a whole lot different this time with exception to what I'm calling the blinkFade method. I wanted something that would look like randomly starting lights that faded away over time. I think this was a pretty succinct way to get that done.
+I did want to add something new with this version and software seemed to be the easiest thing to change. 
 
-```
-def blinkFade():
-    # print("blinking")
-    currentLitPixels = 0
-    # count total lit pixels
-    for p in range(NUMPIXELS):
-        aPixel = neopixels[p]
-        if aPixel[0] > 10:
-            rCur = aPixel[0]
-            gCur = aPixel[1]
-            bCur = aPixel[2]
-            
-            neopixels[p] = ((rCur - 10, gCur - 10, bCur - 10))
-            currentLitPixels += 1
-    
-    # if the number of lit pixels is less than max lit pixels
-    if currentLitPixels < 15:
-        neopixels[random.randint(0,29)] = (250, 250, 250)
-```
+[Updated the `blinkFade` function](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L95) to require a color rather than forcing 'white' on myself every time. 
+[Added a COLORPALLET](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L33) to allow for a collection of related colors.
+[Hacky garbage](https://github.com/icejester/canada-day-skull/blob/998edcdd4510581338fc247088385522c4c4145c/main.py#L179) to pass a random color from a pallet to the function. 
