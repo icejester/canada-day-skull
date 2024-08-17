@@ -1,5 +1,5 @@
 # CANADA DAY SKULL - TERMINATOR EDITION!!
-<img src="images/pskul-fin-resin.gif" width="600"/>
+<img src="images/silverSkull.jpeg" width="600"/>
 
 # Origin story
 So if you've gotten around to this release, you likely know that this project was started because of my buddy and his Canada Day party. If you're not familliar with the origin story, I highly suggest checking out [the original.](https://github.com/icejester/canada-day-skull/tree/cds-v1.0.0)
@@ -10,11 +10,11 @@ After taking in the origin story, I'd encourage you to check out "V2" which is a
 
 <img src="images/shatteredSkull.jpeg" width="600"/>
 
-Unfortunately... shortly after my own summer party, the Pride Skull mysteriously shattered. There was no rhyme or reason to it. I walked into my office one day, and the front of the skull had popped off and there were several other cracks in the skull bottle, but the resin stayed in tact. All of the electrical components were in tact and functional. This was totally repairable.
+Unfortunately... shortly after my own summer party, the Pride Skull mysteriously shattered. There was no rhyme or reason to it. I walked into my office one day, and the front of the skull had popped off and there were several other cracks in the skull bottle, but the resin stayed in tact. All of the electrical components were in tact and functional. This was totally repairable with a little time, effort, and energy. 
 
 # Construction
 
-I wanted to focus more on documenting the construction process this time around. I missed several aspects the first time, so I'd like to focus on them here.
+I honestly dragged my feet a bit this year and the fact that I also wanted to repair the pride skull left me little to no time to really do anything new for construction. I set myself to the task of repairing the pride skull. 
 
 ### Scaffolding 
 
